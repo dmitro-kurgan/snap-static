@@ -1,0 +1,109 @@
+.time {
+	.content-title {
+		h2 {
+			font-size: 39px;
+			@media #{$mobile} {
+				font-size: 24px;
+				line-height: 1;
+			}
+		}
+		i {
+			@media #{$mobile} {
+			    font-size: 13px;
+			    left: calc(50% + 10px);
+			}
+		}
+	}
+	&__elem {
+		position: absolute;
+		z-index: -1;
+		left: -132px;
+		top: calc(50% - 150px);
+		width: 265px;
+		height: 265px;
+		border-radius: 50%;
+		border: 7px dashed #a1f2e2;
+		.circle {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: #a1f2e2;
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+		}
+	}
+	&__block {
+		padding: 40px 0 90px 0;
+		div {
+			@media #{$mobile} {
+				min-width: initial !important;
+				max-width: 290px !important;
+				display: flex !important;
+				justify-content: space-between !important;
+				align-items: center !important;
+			}
+		}
+		.timer-element {
+			@media #{$mobile} {
+				height: 60px !important;
+				width: 60px !important;
+				display: block !important;
+			}
+		}
+		canvas {
+			@media #{$mobile} {
+				height: 60px !important;
+				width: 60px !important;
+			}
+		}
+		// span {
+		// 	font-size: 42px !important;
+		// 	font-weight: 700 !important;
+		// 	font-style: normal !important;
+		// 	font-family: $FirstFont !important;
+		// 	color: #000 !important;
+		// 	&:nth-child(2) {
+		// 		font-size: 24px !important;
+		// 		font-weight: 700 !important;
+		// 		font-style: normal !important;
+		// 		font-family: $FirstFont !important;
+		// 		position: relative;
+		// 		top: -6px;
+		// 	}
+		// }
+		span {
+			font-size: 29px !important;
+			font-weight: 700 !important;
+			font-style: normal !important;
+			font-family: $FirstFont !important;
+			color: #000 !important;
+			padding: 5px 0px !important;
+			@media #{$mobile} {
+				font-size: 21px !important;
+			}
+			&:nth-child(2n+2) {
+				padding: 0px !important;
+			}
+			&:nth-child(2) {
+				font-size: 17px !important;
+				font-weight: 700 !important;
+				font-style: normal !important;
+				font-family: $FirstFont !important;
+				position: relative;
+				top: -6px;
+				@media #{$mobile} {
+					font-size: 12px !important;
+				}
+			}
+		}
+		.timer-separator {
+			@media #{$mobile} {
+			    padding: 5px !important;
+			}
+		}
+	}
+}

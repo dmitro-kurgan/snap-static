@@ -1,0 +1,46 @@
+section.banner#section0
+	.banner__elem-3.wow.bounceInDown(data-wow-duration='1s', data-wow-delay='.25s')
+		.circle
+	.container
+		.banner__elem.wow.bounceInRight(data-wow-duration='1s', data-wow-delay='.5s')
+			.liberty
+		.banner__elem-2.wow.rotateIn(data-wow-duration='1s', data-wow-delay='1.25s')
+			.circle
+		.banner__elem-4.wow.bounceInUp(data-wow-duration='1s')
+			.capitol
+		.banner__elem-5.wow.fadeIn(data-wow-duration='1s', data-wow-delay='.75s')
+			.stars
+		.banner__elem-6.wow.bounceInLeft(data-wow-duration='1s', data-wow-delay='1s')
+			.bird
+		.banner__block
+			.row
+				.col-sm-6
+					.banner__left
+						h1.wow.flipInX(data-wow-duration='1s')
+							| Как заговорить 
+							i на английском,
+							br
+							| зная 
+							i всего 50 слов
+						p.wow.flipInX(data-wow-duration='1s', data-wow-delay='.5s')
+							| Интенсив, который станет для вас самым полезным за всю жизнь!
+							br
+							| Участие бесплатное!
+						span.wow.flipInX(data-wow-duration='1s', data-wow-delay='1s')
+							i 21-22 февраля 
+							| в 19-00 по Москве 
+				.col-sm-6
+					.banner__right
+						.banner__reg
+							.banner__time
+								p Регистрация Участника
+								span До начала интенсива осталось:
+								.banner__counter
+									//- script(src="http://megatimer.ru/s/d31453143b2c430024a8237cd8d10aa4.js")
+									script(src="http://megatimer.ru/s/03f0a0833f6947a326115b81061dea4f.js")
+							form#order-form(data-title="Заявка на сайте", data-order-form)
+								.form-group
+									input.form-control#name(type='text', placeholder='Ваше Имя', name='name', required='required', data-is-included='true', data-title='Имя')
+								.form-group
+									input.form-control#email(placeholder='Ваш Email', name='email', type='email', required='required', data-is-included='true', data-title='E-mail')
+								button(type='submit').btn.btn--main Зарегистрироваться

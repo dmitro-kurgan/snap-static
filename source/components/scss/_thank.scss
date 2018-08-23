@@ -1,0 +1,238 @@
+.wrapper {
+	&--thank {
+		.header {
+			&__menu {
+				span {
+					color: #00dcb0;
+					font-weight: 700;
+					display: inline-block;
+					vertical-align: middle;
+				}
+				li {
+					margin-right: 4px;
+					&:last-child {
+						padding-left: 0px;
+						&:before {
+							display: none;
+						}
+					}
+				}
+				p {
+					color: $main_color;
+					display: inline-block;
+					font-size: 18px;
+					font-weight: 700;
+					vertical-align: middle;
+				}
+			}
+		}
+		.banner {
+			@media #{$tablet} {
+				height: 100vh;
+			}
+			@media (max-height: 650px) {
+				height: initial;
+				padding: 80px 0;
+			}
+			@media #{$mobile} {
+				height: initial;
+				padding: 80px 0px 40px 0;
+			}
+			&__left, &__right {
+				min-height: 440px;
+				display: flex;
+				align-items: center;
+			}
+			&__right {
+				padding-left: 70px;
+				@media #{$desctop-md} {
+					padding-left: 35px;
+				}
+				@media #{$desctop} {
+					padding-left: 0px;
+				}
+			}
+			&__block {
+				padding: 0px;
+			}
+			&__reg {
+				text-align: left;
+				@media #{$mobile} {
+					max-wdith: 500px;
+					margin: auto;
+					text-align: center;
+				}
+				p {
+					@media #{$desctop} {
+						font-size: 36px;
+					}
+					@media #{$tablet} {
+						font-size: 28px;
+					}
+					@media (max-width: 400px) {
+						font-size: 24px;
+					}
+				}
+			}
+			&__counter {
+				div {
+					margin: 0px auto 0px 0px !important;
+				}
+			}
+			&__cong {
+				text-align: left;
+				// min-height: 
+				padding: 70px 40px 75px 50px;
+				background-color: #8869dc;
+				border: 4px solid $main_color;
+				position: relative;
+				overflow: hidden;
+				@media (max-height: 750px) {
+				    padding: 50px 40px 50px 50px;
+				}
+				@media #{$desctop} {
+					padding: 40px 30px;
+				} 
+				@media #{$tablet} {
+				    padding: 30px 20px;
+				}
+				@media #{$mobile} {
+					max-width: 500px;
+					margin: auto;
+				}
+				h1 {
+					font-size: 42px;
+					font-weight: 700;
+					@media (max-height: 750px) {
+					    font-size: 36px;
+					}
+					@media #{$desctop} {
+						font-size: 36px;
+					}
+					@media #{$tablet} {
+						font-size: 28px;
+					}
+					@media (max-width: 400px) {
+						font-size: 24px;
+					}
+				}
+				h3 {
+					font-size: 19px;
+					font-weight: 700;
+				}
+				span {
+					margin-top: 12px;
+					display: inline-block;
+					font-size: 27px;
+					font-weight: 700;
+					padding-left: 60px;
+					position: relative;
+					@media #{$tablet} {
+						font-size: 20px;
+						margin-top: 15px;
+					}
+					@media #{$mobile} {
+						font-size: 16px;
+						padding-left: 50px;
+					}
+					&:before {
+						content: '';
+						position: absolute;
+						left: 0px;
+						width: 45px;
+						height: 32px;
+						background: url(../images/mail.png)no-repeat center;
+						background-size: contain;
+						@media #{$tablet} {
+							top: -5px;
+						}
+					}
+				}
+				p {
+					margin: 20px 0 70px 0;
+					line-height: 1.5;
+					@media (max-height: 750px) {
+				  	  margin: 20px 0 40px 0;
+					}
+					@media #{$tablet} {
+					    margin: 20px 0px;
+					    font-size: 16px;
+					}
+				}
+				img {
+					position: absolute;
+					bottom: -65px;
+					right: -65px;
+					@media #{$tablet} {
+						display: none;
+					}
+				}
+			}
+			&__email {
+				text-align: left;
+				font-weight: 700;
+				p {
+					font-size: 19px;		
+				}
+				a {
+					font-size: 27px;
+					display: inline-block;
+					margin-top: 12px;
+					text-decoration: underline;
+				}
+			}
+			&__footer {
+				position: fixed;
+				bottom: 80px;
+				left: 0px;
+				right: 0px;
+				// margin-top: 65px;
+				padding-top: 8px;
+				border-top: 2px solid #ffffff;
+				@media (max-height: 850px) {
+					bottom: 45px;
+				}
+				@media (max-height: 750px) {
+					bottom: 30px;
+				}
+				@media (max-height: 700px) {
+					position: initial;
+				}
+				@media #{$mobile} {
+					position: initial;
+				}
+				p {
+					font-size: 19px;
+					font-weight: 700;
+				}
+				&-left {
+					padding-left: 65px;
+					@media #{$mobile} {
+						padding-left: 0px;
+						text-align: center;
+					}
+					ul {
+						margin-top: 15px;
+						li {
+							display: inline-block;
+							a {
+								font-size: 38px;
+								color: $main_color;
+							}
+						}
+						li + li {
+							margin-left: 28px;
+						}
+					}
+				}
+				&-right {
+					text-align: right;
+					@media #{$mobile} {
+						text-align: center;
+						margin-top: 30px;
+					}
+				}
+			}
+		}
+	}
+}

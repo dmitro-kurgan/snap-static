@@ -1,0 +1,226 @@
+.comments {
+	.content-title {
+		margin-top: 75px;
+	}
+	&__elem {
+		width: 50%;
+		position: absolute;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		.cells {
+			background: url(../images/cells.png);
+			background-repeat: repeat-x;
+			height: 386px;
+			width: 100%;
+			top: 50%;
+			left: 0px;
+			position: absolute;
+		}
+		.liberty {
+			width: 143px;
+			height: 230px;
+			position: absolute;
+			background: url(../images/liberty.png)repeat;
+			top: calc(50% - 160px);
+			left: calc(50% - 300px);
+			@media #{$desctop} {
+				top: 0px;
+				left: 25px;
+			}
+		}
+		&-2 {
+			position: absolute;
+		    top: calc(0px + 100px);
+			right: -300px;
+			width: 598px;
+			height: 602px;
+			@media #{$tablet} {
+				top: 200px;
+				width: (598px / 1.5);
+				height: (602px / 1.5);
+			}
+			.circle {
+				position: absolute;
+				background: url(../images/circle-dotted.png);
+				background-size: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	&__block {
+		padding-top: 130px;
+		max-width: 1000px;
+		margin: auto;
+		@media #{$mobile} {
+			padding-top: 80px;
+		}
+	}
+}
+.slick-comments {
+	&__box {
+		position: relative;
+		@media #{$mobile} {
+			background-color: #f4f3f5;
+			padding: 40px 20px;
+			max-width: 500px;
+			margin: auto;
+		}
+	}
+	&__left {
+		max-width: 720px;
+		padding: 90px 185px 75px 70px;
+		text-align: right;
+		background-color: #f4f3f5;
+		@media #{$tablet} {
+		    max-width: 680px;
+		    padding: 60px 185px 50px 50px;
+		}
+		@media #{$mobile} {
+			padding: 0px;
+			text-align: left;
+			max-width: 100%;
+		}
+	}
+	&__right {
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		// right: 175px;
+		left: 610px;
+		display: flex;
+		align-items: center;
+		text-align: left;
+		@media #{$tablet} {
+			left: 540px;
+		}
+		@media #{$mobile} {
+			position: initial;
+			justify-content: center;
+		}
+	}
+	&__post, &__text {
+		p {
+			color: #787878;
+			font-size: 17px;
+			line-height: 1.5;
+		}
+	}
+	&__post {
+		@media #{$mobile} {
+			margin-top: 20px;
+		}
+		p {
+			font-weight: 600;
+			@media #{$mobile} {
+				font-size: 14px;
+			}
+		}
+	}
+	&__name {
+		margin: 20px 0 15px 0;
+		p {
+			font-size: 25px;
+			font-weight: 700;
+			color: #242228;
+			@media #{$tablet} {
+				font-size: 21px;
+			}
+		}
+	}
+	&__socials {
+		direction: rtl;
+		span {
+			font-size: 25px;
+			margin-right: 5px;
+			@media #{$tablet} {
+				font-size: 19px;
+			}
+		}
+		a {
+			color: #abaaad;
+			font-size: 19px;
+			font-weight: 700;
+			@media #{$tablet} {
+				font-size: 14px;
+			}
+		}
+	}
+	&__text {
+		margin-top: 30px;
+		@media #{$mobile} {
+			margin-top: 20px;
+		}
+		p {
+			@media #{$mobile} {
+				font-size: 16px;
+			}
+		}
+		a {
+			margin-top: 15px;
+			display: inline-block;
+			text-decoration: underline;
+			font-size: 17px;
+			font-weight: 700;
+			color: #7450c7;
+		}
+	}
+	&__img {
+		width: 175px;
+		height: 175px;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	.slick-prev, .slick-next {
+		top: calc(100% - 20px);
+		width: 34px;
+		height: 23px;
+		@media #{$mobile} {
+			top: calc(100% + 25px);
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			height: 2px;
+			width: 34px;
+			background-color: #787878;
+
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			border: solid #787878;
+			border-width: 2px 2px 0px 0px;
+			padding: 7px;
+
+		}
+	}
+	.slick-prev {
+		left: initial;
+		z-index: 1;
+		right: 120px;
+		@media #{$mobile} {
+			right: initial;
+			left: 0px;
+		}
+		&:after {
+			@include addPrefix(transform, rotate(225deg));
+			left: 17px;
+			top: 5px;
+		}
+	}
+	.slick-next {
+		right: 50px;
+		@media #{$mobile} {
+			right: 25px;
+		}
+		&:after {
+			@include addPrefix(transform, rotate(45deg));
+			right: -15px;
+			top: 5px;
+		}
+	}
+}

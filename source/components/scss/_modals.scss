@@ -1,0 +1,140 @@
+.modal {
+	text-align: center;
+	&:before {
+		display: inline-block;
+		vertical-align: middle;
+		content: " ";
+		height: 100%;
+	}
+	&-dialog {
+		// width: 650px;
+		max-width: 650px;
+		color: $main_color;
+		background-color: #44378f;
+		padding: 20px;
+		display: inline-block;
+		text-align: left;
+		vertical-align: middle;
+		@media (max-width: 400px) {
+			max-width: 300px;
+			padding: 15px;
+		}
+	}
+	&-header {
+		border-bottom: none;
+		padding: 20px 0 0 0;
+		.close {
+			position: absolute;
+			right: -4px;
+			top: -2px;
+			opacity: 1;
+			width: 30px;
+			height: 30px;
+			border: 4px solid #7f52cb;
+			&:focus {
+				outline: none;
+			}
+			&:before {
+				content: '';
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+				margin: auto;
+				background: url(../images/close.png)no-repeat center;
+				background-size: contain;
+				width: 13px;
+				height: 13px;
+				position: absolute;
+			}
+		}
+	}
+	&-content {
+		border: 4px solid #7f52cb;
+		border-radius: 0px;
+		box-shadow: none;
+		background-color: #44378f;
+		text-align: center;
+		p {
+			color: #b289f7;
+			font-size: 18px;
+			padding-top: 20px;
+		}
+	}
+	&-body {
+		padding: 30px;
+		@media (max-width: 400px) {
+			padding: 20px;
+		}
+		input {
+			border: solid #312476;
+			border-radius: 0px;
+			border-width: 0px 0px 2px 0px;
+			background-color: transparent;
+			font-size: 25px;
+			font-weight: 700;
+			height: 55px;
+			color: $main_color;
+			box-shadow: none;
+			@include addPrefixPlaceholder(placeholder, color, $main_color);
+			@include addPrefixPlaceholder(placeholder, font-size, 25px);
+			@include addPrefixPlaceholder(placeholder, font-weight, 700);
+			&:focus, &:active {
+				border-color: #00dcb0;
+				box-shadow: none;
+			}
+		}
+		.form-group {
+			margin-bottom: 25px;
+		}
+		button {
+			margin-top: 10px;
+			padding: 13px 20px;
+			max-width: 332px;
+			width: 100%;
+			background-color: #00dcb0;
+			border: 1px solid #00dcb0;
+			text-transform: uppercase;
+			color: #302476;
+			@media (max-width: 400px) {
+				min-width: 100%;
+				font-size: 15px;
+			}
+			&:hover {
+				border-color: #302476;
+			}
+		}
+	}
+	.content-title {
+		margin-top: 0px;
+		padding-top: 55px;
+		&:before {
+			background-color: $main_color;
+			height: 38px;
+		}
+		i {
+			font-size: 21px;
+			top: 20px;
+			left: calc(50% + 14px);
+			@media (max-width: 400px) {
+				font-size: 17px;
+			}
+		}
+		h2 {
+			font-size: 29px;
+			padding-top: 0px;
+			line-height: 1.25;
+			@media (max-width: 400px) {
+				font-size: 19px;
+			}
+		}
+
+	}
+}
+#ThankModal {
+	.content-title {
+		&:before {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,236 @@
+.teacher {
+	.content-title {
+		@media #{$mobile} {
+			margin-top: 50px;
+		}
+	}
+	&__sign {
+		font: 700 normal 140px $SecondFont;
+		color: #f5f2fa;
+		text-transform: uppercase;
+		position: absolute;
+		top: 55px;
+		right: 0px;
+		line-height: 1;
+		@media #{$desctop-md} {
+			font-size: 110px;
+		}
+		@media #{$desctop} {
+			font-size: 90px;
+			top: 62px;
+		}
+		@media #{$tablet} {
+			font-size: 71px;
+			top: 66px;
+		}
+		@media #{$mobile} {
+			font-size: 60px;
+			top: 11px;
+		}
+	}
+	&__elem {
+		position: absolute;
+		right: -60px;
+		bottom: -170px;
+		@include addPrefix(transform, rotate(270deg));
+		.triangle {
+			border-color: #958dbf transparent transparent transparent;
+			border-style: solid;
+			border-width: 260px 145px 0px 145px;
+			height: 0;
+			width: 0;
+			right: 134px;
+			top: 268px;
+			@media #{$tablet} {
+				border-width: ((260px / 1.5) (145px / 1.5) (0px) (145px / 1.5));
+			}
+		    &__inner {
+				position: absolute;
+				border-color: #fff transparent transparent transparent;
+				border-style: solid;
+				border-width: 210px 120px 0px 130px;
+				height: 0;
+				width: 0;
+			    top: -34px;
+		     	left: 52px;
+				@include addPrefix(transform, rotate(-120deg));
+				@media #{$tablet} {
+					border-width: ((210px / 1.5) (120px / 1.5) (0px) (130px / 1.5));
+					top: -24px;
+					left: 35px;
+				}   
+		    }
+		}
+		.circle {
+			position: absolute;
+		    right: 110px;
+    		bottom: 10px;
+			border-radius: 50%;
+			border: 30px solid #ff6194;
+			width: 100px;
+			height: 100px;
+			@media #{$tablet} {
+				right: (110px / 1.5);
+				width: (100px / 1.5);
+				height: (100px / 1.5);
+				border-width: (30px / 1.5);
+			}
+		}
+	}
+	&__block {
+		padding-top: 75px;
+		padding-bottom: 200px;
+		position: relative;
+		@media #{$mobile} {
+			padding-bottom: 60px;
+		}
+	}
+	&__left, &__right {
+		min-height: 670px;
+		@media #{$tablet} {
+			min-height: 460px;
+		}
+		@media #{$mobile} {
+			min-height: 380px;
+		}
+	}
+	&__left {
+		max-width: 660px;
+		margin: 0px 0px 0px auto;
+		background-color: #f4f3f5;
+		position: relative;
+		@media #{$mobile} {
+			max-width: 320px;
+			// margin: 0px auto 0px 0px;
+		    margin: auto;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: -20px;
+			bottom: -60px;
+			background-image: url(../images/price.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 91px;
+			height: 120px;
+			@media #{$mobile} {
+				bottom: initial;
+				top: 0px;
+				left: initial;
+				right: 0px;
+			}
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 130px;
+			left: -200px;
+			width: 770px;
+			height: 776px;
+			background-image: url(../images/circle-dotted.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			@media #{$desctop} {
+				top: 265px;
+				left: (-200px / 1.5);
+				width: (770px / 1.5);
+				height: (776px / 1.5);
+			}
+			@media #{$tablet} {
+				top: 100px;
+			}
+			@media #{$mobile} {
+				top: 20px;
+				left: (-200px / 2);
+				width: (770px / 2);
+				height: (776px / 2);
+			}
+		}
+		img {
+			position: absolute;
+			left: 38px;
+			bottom: 0px;
+			@media #{$desctop} {
+			    max-width: calc(100% - 72px);
+			}
+			@media #{$mobile} {
+				left: 0px;
+			    right: 0px;
+			    margin: auto;
+			    max-height: 90%;
+			}
+		}
+	}
+	&__right {
+		display: flex;
+		align-items: flex-end;
+		@media #{$mobile} {
+			display: block;
+		}
+	}
+	&__title {
+		position: relative;
+		max-width: 430px;
+		font-size: 33px;
+		font-weight: 700;
+		margin-bottom: 50px;
+		@media #{$tablet} {
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 140px;
+			left: -90px;
+			background-color: #ffa7a6;
+			width: 90px;
+			height: 2px;
+			@media #{$tablet} {
+				top: 100px;
+			}
+			@media #{$mobile} {
+				display: none;
+			}
+		}
+		p {
+			color: #c2c2c6;
+			line-height: 1.25;
+		}
+		span {
+			color: #96969b;
+			@media #{$tablet} {
+				font-size: 21px;
+			}
+		}
+	}
+	&__inner {
+		position: relative;
+		left: -90px;
+		bottom: 40px;
+		@media #{$desctop-md} {
+			left: 0px;
+		}
+		@media #{$tablet} {
+			bottom: 0px;
+			top: 90px;
+		}
+		@media #{$mobile} {
+			top: 0px;
+			padding-top: 30px;
+		}
+	}
+	&__info {
+		max-width: 740px;
+		p {
+			line-height: 1.25;
+			color: #808083;
+			@media #{$mobile} {
+				font-size: 18px;
+			}
+		}
+	}
+}

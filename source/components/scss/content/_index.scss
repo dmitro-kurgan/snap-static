@@ -1,0 +1,67 @@
+.wrapper {
+	overflow: hidden;
+}
+.content {
+	&-title {
+		text-align: center;
+		position: relative;
+		margin-top: 150px;
+		padding-top: 90px;
+		h2 {
+			font-weight: 700;
+			line-height: 0.8;
+			font-size: 66px;
+			text-transform: uppercase;
+			padding-top: 25px;
+			@media #{$desctop-md} {
+				font-size: 52px;
+			}
+			@media #{$mobile} {
+				font-size: 32px;
+			}
+		}
+		span {
+			font-size: 42px;
+			@media #{$desctop-md} {
+				font-size: 36px;
+			}
+			@media #{$mobile} {
+				font-size: 21px;
+			}
+		}
+		i {
+			top: 58px;
+			font-size: 25px;
+			font-weight: 400;
+			position: absolute;
+			left: calc(50% + 25px);
+			@media #{$desctop-md} {
+				font-size: 21px;
+			}
+			@media #{$mobile} {
+				font-size: 16px;
+			}
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: 50%;
+			height: 80px;
+			width: 2px;
+			background-color: #bababa;
+		}
+	}
+}
+section {
+	position: relative;
+}
+.guarantee, .teacher, .books, .comments, .time {
+	.content {
+		&-title {
+			&:before {
+				background-color: #1e1c22;
+			}
+		}
+	}
+}

@@ -1,0 +1,137 @@
+.members {
+	&__elem {
+		position: absolute;
+		left: calc(50% - 600px);
+		top: 10px;
+		@media #{$desctop-md} {
+			left: 70px;
+		}
+		@media #{$mobile} {
+			left: 0px;
+		}
+		.flag {
+			width: 282px;
+			height: 289px;
+			background: url(../images/flag.png)no-repeat center;
+			background-size: contain;
+			@media #{$desctop-md} {
+				width: (282px / 1.5);
+				height: (289px / 1.5);
+			}
+			@media #{$mobile} {
+				width: (282px / 2);
+				height: (289px / 2);
+			}
+		}
+	}
+	&__elem-2 {
+		position: absolute;
+		right: -400px;
+		top: 200px;
+		background: url(../images/circle-dotted.png)no-repeat center;
+		background-size: contain;
+		width: 560px;
+		height: 560px;
+		@include addPrefix(transform, rotate(-40deg));
+		@media #{$desctop-md} {
+			right: (-400px / 1.5);
+			top: (200px / 1.5);
+			width: (560px / 1.5);
+			height: (560px / 1.5);
+		}
+		@media #{$mobile} {
+			right: (-400px / 2);
+			top: 0px;
+			width: (560px / 2);
+			height: (560px / 2);
+		}
+		.circle {
+			border-radius: 50%;
+			position: absolute;
+			&--large {
+				width: 70px;
+				height: 70px;
+				border: 7px solid #44378f;
+				left: 0px;
+				top: 125px;
+				@media #{$desctop-md} {
+					top: (125px / 1.5);
+					height: (70px / 1.5);
+					width: (70px / 1.5);
+				}
+				@media #{$mobile} {
+					top: (125px / 2);
+					height: (70px / 2);
+					width: (70px / 2);
+				}
+			}
+		}
+		.wave {
+			width: 50px;
+			height: 44px;
+			position: absolute;
+			left: 100px;
+			top: 25px;
+			background: url(../images/wave.png)no-repeat center;
+			@media #{$desctop-md} {
+				width: (50px / 1.5);
+				height: (44px / 1.5);
+				left: (100px / 1.5);
+				top: (25px / 1.5);
+			}
+			@media #{$mobile} {
+				width: (50px / 2);
+				height: (44px / 2);
+				left: (100px / 2);
+				top: (25px / 2);
+			}
+		}
+	}
+	&__sign {
+		font: 700 normal 140px $SecondFont;
+		color: #f5f2fa;
+		text-transform: uppercase;
+		position: absolute;
+		top: 15px;
+		left: -250px;
+		letter-spacing: 35px;
+		@media #{$desctop-lg} {
+			left: -120px;
+		}
+		@media #{$desctop-md} {
+			left: 0px;
+		}
+		@media #{$mobile} {
+			font-size: 70px;
+			letter-spacing: 17px;
+		}
+	}
+	&__block {
+		padding-top: 220px;
+		max-width: 1120px;
+		margin: auto;
+		position: relative;
+		@media #{$mobile} {
+			padding-top: 110px;
+		}
+	}
+	&__left, &__right {
+		max-width: 540px;
+		margin: auto;
+	}
+	&__left {
+
+	}
+	&__right {
+
+	}
+	h2 {
+		padding-top: 0px;
+	}
+	p {
+		line-height: 2;
+		@media #{$mobile} {
+			font-size: 18px;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+footer#section7
+	.footer
+		.footer__elem.wow.fadeIn(data-wow-duration='2s')
+			.circle.circle--small.wow.flipInX(data-wow-duration='2s', data-wow-delay='.5s')
+			.circle.circle--large.wow.flipInX(data-wow-duration='2s', data-wow-delay='1s')
+			.wave.wow.flipInX(data-wow-duration='2s', data-wow-delay='1.5s')
+			img.wow.bounceIn(data-wow-duration='1s', data-wow-delay='1s', src=require("../components/images/shield.png"), alt="shield")
+		.container
+			.content-title.wow.flipInX(data-wow-duration='2s')
+				i регистрация участника
+				h2 Регистрация
+			.footer__block
+				.footer__reg
+					form#order-form3(data-title="Заявка на сайте", data-order-form)
+						.form-group
+							input.form-control#name(type='text', placeholder='Ваше Имя', name='name', required='required', data-is-included='true', data-title='Имя')
+						.form-group
+							input.form-control#email(type='email', placeholder='Ваш Email', name='email', required='required', data-is-included='true', data-title='E-mail')
+						button(type='submit').btn.btn--main Зарегистрироваться
+				.footer__info
+					ul
+						li
+							a(href="mailto:info@snapenglish.ru").mail info@snapenglish.ru
+						li
+							a(href="tel:+74994041241").tel +7 (499) 404-12-41
+					.footer__socials
+						ul
+							li
+								a(href="https://vk.com/snap_english", target='_blank')
+									span.fa.fa-vk
+							li
+								a(href="https://www.facebook.com/pages/SNAP-English-School/1408703859439074", target='_blank')
+									span.fa.fa-facebook
+							li
+								a(href="https://www.instagram.com/snap_english/", target='_blank')
+									span.fa.fa-instagram
+							li
+								a(href="https://www.youtube.com/channel/UCI0PzWpQQrpgc0F-Ynx-jkw", target='_blank')
+									span.fa.fa-youtube
+					form#order-form4(data-title="Заявка на сайте", data-order-form)
+						.form-group
+							label(for='tel') Заказать обратный звонок:
+							input.form-control#tel(type='tel', name='tel', placeholder='Ваш Телефон', required='required', data-is-included='true', data-title='Телефон')
+							button(type='submit') Заказать
+					.footer__conf
+						a(href="#") Договор публичной оферты
+						a(href="#") Политика конфиденциальности
+				.footer__production
+					a(href="https://unitspace.top") Разработка и создание сайтов Киев, Харьков

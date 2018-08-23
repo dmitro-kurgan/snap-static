@@ -1,0 +1,29 @@
+#MainModal.modal.fade(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal')
+        //- h4.modal-title Modal Header
+        .content-title
+          i регистрация
+          h2 Записаться на бесплатный интенсив:
+        p.
+          Для участия в интенсиве, заполните форму внизу.
+      .modal-body
+        form#order-form2(data-title="Заявка на сайте", data-order-form)
+            .form-group
+              input.form-control#name(type='text', placeholder='Ваше Имя', name='name', required='required', data-is-included='true', data-title='Имя')
+            .form-group
+              input.form-control#email(type='email', placeholder='Ваш Email', name='email', required='required', data-is-included='true', data-title='E-mail')
+            button(type='submit').btn.btn--main Зарегистрироваться
+#ThankModal.modal.fade(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal')
+        //- h4.modal-title Modal Header
+        .content-title
+          h2 Ошибка!
+        p.
+          Произошла ошибка при отправке заявки. Пожалуйста, попробуйте отправить заявку еще раз.
+      .modal-body

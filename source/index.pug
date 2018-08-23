@@ -1,0 +1,23 @@
+extends ./templates/base
+
+block title
+	title Открытый Интенсив Как заговоритьна английском, зная всего 50 слов
+block main
+	.wrapper
+		include ./templates/header
+		.content
+			include ./banner
+			include ./members
+			include ./program
+			include ./guarantee
+			include ./teacher
+			include ./books
+			include ./comments
+			include ./time
+		include ./templates/footer
+		include ./templates/modals
+	script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+	script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/jquery.form-sender.js')
+	script(type='text/javascript', src='./libs/jquery.form-sender/intlTelInput.min.js')
+	script(type='text/javascript', src='./js/send.js')

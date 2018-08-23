@@ -1,0 +1,79 @@
+extends ./templates/base
+
+block title
+	title Открытый Интенсив Как заговоритьна английском, зная всего 50 слов
+
+block main
+	.wrapper.wrapper--thank
+		header
+			.header
+				.container
+					.header__content
+						.header__logo
+							a(href="./")
+						.header__menu
+							ul
+								li.active
+									span S
+									p uperfast,
+								li
+									span N
+									p atural,
+								li
+									span A
+									p ctive,
+								li
+									span P
+									p ositive
+								li
+									p English School
+		.content
+			section.banner#section0
+				.banner__elem-3.wow.bounceInDown(data-wow-duration='1s', data-wow-delay='.25s')
+					.circle
+				.container
+					.banner__elem-2.wow.rotateIn(data-wow-duration='1s', data-wow-delay='1.25s')
+						.circle
+					.banner__block
+						.row
+							.col-sm-6
+								.banner__left
+									.banner__cong
+										h1 ПОЗДРАВЛЯЕМ ВАС!
+										p.
+											Скорее переходите на вашу почту! Мы уже отправили Вам инструкцию с дальнейшими действиями  Вам необходимо подтвердить подписку на нашу рассылку!
+										h3 Проверьте свой E-mail
+										span snapenglish@gmail.com
+										img(src=require("./components/images/flag3.png"), alt="")
+							.col-sm-6
+								.banner__right
+									.banner__reg
+										.banner__time
+											p Регистрация Участника
+											span До начала интенсива осталось:
+											.banner__counter
+												script(src="http://megatimer.ru/s/d31453143b2c430024a8237cd8d10aa4.js")
+										.banner__email
+											p Наш E-mail
+											a(href="mailto:info@snapenglish.ru") info@snapenglish.ru
+					.banner__footer.container
+						.row
+							.col-sm-6
+								.banner__footer-left
+									p Мы в социальных сетях:
+									ul
+										li
+											a(href="https://vk.com/snap_english", target='_blank')
+												span.fa.fa-vk
+										li
+											a(href="https://www.facebook.com/pages/SNAP-English-School/1408703859439074", target='_blank')
+												span.fa.fa-facebook
+										li
+											a(href="https://www.instagram.com/snap_english/", target='_blank')
+												span.fa.fa-instagram
+										li
+											a(href="https://www.youtube.com/channel/UCI0PzWpQQrpgc0F-Ynx-jkw", target='_blank')
+												span.fa.fa-youtube
+							.col-sm-6
+								.banner__footer-right
+									p SNAPENGLISH.RU © 2018

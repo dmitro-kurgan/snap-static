@@ -1,0 +1,53 @@
+section.books
+	.books__elem.wow.fadeInRight(data-wow-duration='3s')
+		.cells
+	.books__elem-2.wow.bounce(data-wow-duration='2s')
+		.circle
+	.books__elem-3.wow.flipInY(data-wow-duration='1s')
+		.flag
+	.books__elem-4.wow.pulse(data-wow-duration='1s')
+		.circle.wow.flash(data-wow-duration='1s')
+	.container
+		.content-title.wow.flipInX(data-wow-duration='2s')
+			i Книги
+			h2 Юрия Дружбинского
+		.books__block
+			.books__sign.wow.slideInLeft(data-wow-duration='1s') Books
+			div
+				mixin books-left(name, secname, author, img)
+					.row
+						.col-xs-12.col-sm-6.col-sm-push-6
+							.books__right.wow.bounceInRight(data-wow-duration='2s')
+								.books__img
+									img(src=require("./components/images/" + img), alt="")
+						.col-xs-12.col-sm-6.col-sm-pull-6
+							
+							.books__left.wow.fadeIn(data-wow-duration='1s')
+								.books__info
+									.books__name
+										h4= name
+										p= secname
+									.books__author
+										span= author
+				mixin books-right(name, secname, author, img)
+					.row
+						.col-sm-6
+							.books__right.wow.bounceInLeft(data-wow-duration='2s')
+								.books__img
+									img(src=require("./components/images/" + img), alt="")
+						.col-sm-6
+							.books__left.wow.fadeIn(data-wow-duration='1s')
+								.books__info
+									.books__name
+										h4= name
+										p= secname
+									.books__author
+										span= author
+				.books__box
+					+books-left('Angliйskiй для своих', '', 'Юрий Дружбинский', 'book1.png')
+				.books__box
+					+books-right('Реальный English', 'How to speak, чтобы вас поняли', 'Юрий Дружбинский', 'book2.png')
+				.books__box
+					+books-left('Реальный English', 'Как подружиться с грамматикой раз и навсегдай', 'Юрий Дружбинский', 'book3.png')
+				.books__box
+					+books-right('Быстрый Английский', 'для путешественников во времени', 'Юрий Дружбинский', 'book4.png')

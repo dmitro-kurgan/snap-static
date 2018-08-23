@@ -1,0 +1,28 @@
+section.program#section2
+	.program__elem.wow.fadeInRight(data-wow-duration='1s')
+		.circle
+	.program__elem-2.wow.fadeInRight(data-wow-duration='3s', data-wow-delay='.5s')
+		.hat
+	.program__elem-3.wow.flash(data-wow-duration='1s')
+		.stars
+	.container
+		.content-title.wow.flipInX(data-wow-duration='2s')
+			i наш интенсив
+			h2 Программа
+		.program__block
+			.program__sign.wow.slideInLeft(data-wow-duration='1s')
+				p About us
+			ul.row
+				mixin program(pic, name, info)
+					li.col-md-4.col-sm-12
+						.program__box
+							.program__img
+								img(src=require("./components/images/" + pic), alt="pic")
+							.program__name
+								h3= name
+							.program__info
+								p= info
+				+program('icon1.png', 'грамматика', 'Вся база грамматики английского языка за 2 часа (алгоритм, в который вписывается все, что есть в английской грамматике)')
+				+program('icon2.png', 'лексика', 'Как запоминать слова, даже если у вас плохая память (работающие техники запоминания слов)')
+				+program('icon3.png', 'произношение', 'Как избавиться от русского акцента и начать понимать носителей (всего несколько изменений, которые сделают ваше произношение правильным) все, что есть в английской грамматике)')
+				a(href="#", data-toggle='modal', data-target='#MainModal').btn.btn--main Записаться на вебинар
